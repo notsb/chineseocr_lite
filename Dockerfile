@@ -12,6 +12,7 @@ RUN yum -y update \
     && yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel libffi-devel \
     && yum -y install python3-devel centos-release-scl scl-utils-build \
     && yum -y install  devtoolset-7-gcc* \
+    && yum install mesa-libGL -y \
     && echo 'source /opt/rh/devtoolset-7/enable' >> ~/.bash_profile \
     && source ~/.bash_profile \
     && scl enable devtoolset-7 bash 
